@@ -1,77 +1,98 @@
-# Aeropuerto---WinForms
+# Aerolinea---WinForm
 
-# 📦 Proyecto de Base de Datos: Gestión Operativa de un Aeropuerto
+# ✈️ Proyecto de Base de Datos: Gestión Operativa de una Aerolínea
 
-## ✈️ Enunciado General
+## 🧭 Enunciado General
 
-Un importante aeropuerto internacional de nuestra región, que opera vuelos nacionales e internacionales a diario, requiere la implementación de una base de datos integral para la gestión de sus operaciones y servicios clave.
+Una importante aerolínea nacional, con operaciones regulares a diversas provincias argentinas y algunos destinos internacionales, requiere el desarrollo de un sistema para la **gestión integral de su actividad comercial y operativa**.
 
-Este sistema deberá permitir registrar, organizar y consultar información relacionada con vuelos, aerolíneas, pasajeros, aviones, personal aeroportuario y servicios logísticos, con el fin de optimizar la operatividad y mejorar la experiencia de viaje.
+Este sistema estará orientado al **registro y administración de vuelos, flota, tripulaciones, reservas de pasajeros, check-in, y ventas**, así como a la generación de reportes estadísticos y financieros.
 
 ---
 
-## 🧩 Requisitos Funcionales
-
-### 📌 Registro y Gestión de Aerolíneas
-- Alta de aerolíneas, con datos institucionales y contactos.
-- Registro de su flota de aviones (matrícula, modelo, capacidad, autonomía, etc.).
-- Carga de personal asignado (pilotos, auxiliares, tripulación).
+## 📌 Requisitos Funcionales
 
 ### 🛫 Programación de Vuelos
-- Alta de vuelos con información detallada:
+- Alta y edición de vuelos programados:
   - Número de vuelo, origen y destino.
-  - Horario estimado de salida y llegada.
-  - Frecuencia (diaria, semanal, etc.).
-  - Tipo de servicio (nacional o internacional).
-  - Avión y tripulación asignada.
-- Asignación de pistas y puertas de embarque según disponibilidad.
+  - Días y horarios de operación.
+  - Duración estimada y tipo de servicio (nacional/internacional).
+- Asignación de aeronave disponible y tripulación.
 
-### 👥 Gestión de Pasajeros
-- Registro de pasajeros: DNI, nacionalidad, contacto, preferencias, asistencia especial.
-- Asociación a programas de fidelización (si corresponde).
-- Compra de pasajes por distintos canales (presencial, web, agencia).
+### 🛩️ Gestión de Flota
+- Registro de aeronaves:
+  - Matrícula, modelo, capacidad de pasajeros, autonomía.
+  - Fecha de último mantenimiento.
+- Asociación de cada avión con los vuelos asignados.
+
+### 👨‍✈️ Gestión de Tripulaciones
+- Alta de personal de vuelo:
+  - Pilotos, copilotos, auxiliares de cabina.
+  - Datos personales, licencias, idiomas, historial de vuelos.
+- Validación de disponibilidad horaria y cumplimiento de normas de descanso.
+- Evitar solapamiento de asignaciones.
+
+### 🎟️ Reservas y Venta de Pasajes
+- Registro de pasajeros:
+  - Nombre, documento, nacionalidad, datos de contacto.
+  - Preferencias de comida, asistencia especial.
+- Reserva de pasajes por distintos canales (web, call center, agencia).
+- Control de disponibilidad de asientos.
+- Estado de la reserva: pendiente, confirmada, cancelada.
+
+### 💳 Pagos y Promociones
+- Registro del método de pago: tarjeta, efectivo, millas acumuladas.
+- Aplicación de cupones promocionales (con control de vigencia y uso).
+- Acumulación de millas según programa de fidelización.
 
 ### 🧳 Check-in y Equipaje
-- Registro de check-in con validación de identidad.
-- Asignación de asientos y emisión de boarding pass.
-- Carga de equipaje: cantidad de piezas, peso, dimensiones.
+- Validación de identidad y reserva.
+- Asignación de asiento (automática o elegida previamente).
+- Registro de equipaje despachado: cantidad, peso y dimensiones.
 
-### 📡 Seguimiento Operativo
-- Estados de vuelos en tiempo real: en horario, embarcando, retrasado, cancelado, etc.
-- Registro de eventos relevantes: desvíos, mantenimiento, cambios de puerta, etc.
-- Control migratorio para vuelos internacionales.
-
-### 👨‍✈️ Personal Aeroportuario
-- Registro de empleados del aeropuerto: nombre, rol, sector (embarque, limpieza, torre, etc.).
-- Gestión de turnos y asignación a sectores.
-
-### 💰 Facturación y Estadísticas
-- Cálculo de cargos por servicios prestados a aerolíneas:
-  - Uso de pista, estacionamiento, logística, etc.
-- Generación de reportes:
-  - Pasajeros por destino.
-  - Puntualidad por aerolínea.
-  - Utilización de infraestructura.
-  - Vuelos por franja horaria.
+### 📊 Reportes y Métricas
+- Vuelos realizados por ruta y fecha.
+- Ocupación promedio por vuelo y avión.
+- Ventas por destino y canal.
+- Millas acumuladas y redimidas por cliente.
+- Reportes de uso de flota y disponibilidad operativa.
 
 ---
 
-## 🛠️ Objetivos del Proyecto
+## 🎯 Objetivos del Proyecto
 
-- Diseñar un modelo relacional normalizado que represente adecuadamente las entidades y relaciones del dominio aeroportuario.
-- Implementar la base de datos en SQL Server.
-- Garantizar integridad referencial, control de claves primarias/foráneas y tipos de datos adecuados.
-- Facilitar consultas complejas y reportes operativos.
+- Modelar una base de datos relacional normalizada para el dominio aeronáutico.
+- Implementar el sistema en SQL Server.
+- Garantizar integridad referencial, tipos de datos adecuados y relaciones sólidas.
+- Preparar consultas SQL y reportes útiles para la toma de decisiones operativas y comerciales.
+
+---
+
+## 🛠️ Consideraciones Técnicas
+
+- Control de restricciones: validación de solapamientos de tripulaciones y disponibilidad de aviones.
+- Posibilidad de registrar vuelos recurrentes o únicos.
+- Optimización de consultas para reportes de uso frecuente.
+- Manejo eficiente de estados (reservas, vuelos, pagos).
 
 ---
 
-## 📎 Consideraciones Técnicas
+## 🧩 Alcance del Sistema
 
-- El sistema deberá contemplar la escalabilidad de operaciones.
-- Deberá permitir múltiples vuelos diarios, pasajeros concurrentes y asignaciones dinámicas de infraestructura.
-- Se recomienda diseñar procedimientos almacenados para tareas repetitivas como check-in, asignación de puertas y facturación.
+Este sistema está diseñado para **uso interno de la aerolínea** por parte del personal administrativo, operativo y comercial.  
+No está pensado para ser utilizado directamente por pasajeros ni por personal de aeropuertos.
 
 ---
+
+## 📎 Archivos Relacionados
+
+- Diagrama entidad-relación (ERD)
+- Script de creación de base de datos en SQL Server
+- Procedimientos almacenados de reservas, asignación de tripulación y check-in
+- Vistas y consultas para reportes
+
+---
+
 
 ## 📌 Nota Final
 
