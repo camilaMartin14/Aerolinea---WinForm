@@ -21,3 +21,7 @@ C:\Users\camil\OneDrive\Escritorio\Aeropuerto---WinForms\Aerolínea\obj\Debug\ne
 C:\Users\camil\OneDrive\Escritorio\Aeropuerto---WinForms\Aerolínea\obj\Debug\net8.0-windows\Aerolínea.pdb
 C:\Users\camil\OneDrive\Escritorio\Aeropuerto---WinForms\Aerolínea\obj\Debug\net8.0-windows\Aerolínea.genruntimeconfig.cache
 C:\Users\camil\OneDrive\Escritorio\Aeropuerto---WinForms\Aerolínea\obj\Debug\net8.0-windows\ref\Aerolínea.dll
+C:\Users\camil\OneDrive\Escritorio\Aeropuerto---WinForms\Aerolínea\obj\Debug\net8.0-windows\Aerolínea.Presentacion.Aviones.resources
+C:\Users\camil\OneDrive\Escritorio\Aeropuerto---WinForms\Aerolínea\obj\Debug\net8.0-windows\Aerolínea.Presentacion.Tripulación.resources
+C:\Users\camil\OneDrive\Escritorio\Aeropuerto---WinForms\Aerolínea\obj\Debug\net8.0-windows\Aerolínea.Presentacion.Vuelos.resources
+C:\Users\camil\OneDrive\Escritorio\Aeropuerto---WinForms\Aerolínea\obj\Debug\net8.0-windows\Aerolínea.csproj.GenerateResource.cache
