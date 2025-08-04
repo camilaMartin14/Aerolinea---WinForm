@@ -12,7 +12,7 @@ namespace Aerolínea.Datos
 {
     internal class AccesoDatos
     {
-        private string CadenaConexion = "Data Source=CAMILA\\SQLEXPRESS;Initial Catalog=AEROLINEA;Integrated Security=True";
+        private string CadenaConexion = "Data Source=CAMILA\\SQLEXPRESS;Initial Catalog=AEROLINEA_DB;Integrated Security=True";
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
