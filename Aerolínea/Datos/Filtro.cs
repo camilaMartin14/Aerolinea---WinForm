@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aerolínea.Datos
 {
-    internal class VueloDAO
+    internal class Filtro
     {
     }
 }

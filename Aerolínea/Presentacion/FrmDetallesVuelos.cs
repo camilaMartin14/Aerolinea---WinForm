@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aerolínea.Presentacion
 {
-    public partial class Menú : Form
+    public partial class FrmDetallesVuelos : Form
     {
-        public Menú()
+        public FrmDetallesVuelos()
         {
             InitializeComponent();
         }

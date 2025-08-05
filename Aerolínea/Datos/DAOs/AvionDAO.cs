@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aerolínea.Datos
+namespace Aerolínea.Datos.DAOs
 {
-    internal class TripulanteDao
+    internal class AvionDAO
     {
     }
 }

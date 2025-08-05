@@ -1,6 +1,6 @@
 ﻿namespace Aerolínea.Presentacion
 {
-    partial class Vuelos
+    partial class FrmVuelos
     {
         /// <summary>
         /// Required designer variable.

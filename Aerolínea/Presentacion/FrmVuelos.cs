@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Aerolínea.Presentacion
 {
-    public partial class Tripulación : Form
+    public partial class FrmVuelos : Form
     {
-        public Tripulación()
+        public FrmVuelos()
         {
             InitializeComponent();
         }
+
     }
 }
