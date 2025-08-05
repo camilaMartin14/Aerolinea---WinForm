@@ -16,5 +16,10 @@ namespace Aerolínea.Presentacion
         {
             InitializeComponent();
         }
+
+        private void FrmDetallesTripulantes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
