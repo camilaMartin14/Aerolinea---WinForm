@@ -8,5 +8,10 @@ namespace Aerolínea.Datos.DAOs
 {
     internal class VueloDAO
     {
+        AccesoDatos oBD;
+        public VueloDAO() 
+        {
+            oBD = new AccesoDatos();
+        }
     }
 }

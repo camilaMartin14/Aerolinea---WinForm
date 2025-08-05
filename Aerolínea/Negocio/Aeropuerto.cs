@@ -8,5 +8,14 @@ namespace Aerolínea.Negocio
 {
     internal class Aeropuerto
     {
+        public int Id {  get; set; }
+        public string Nombre { get; set; }
+
+        public string CodigoIATA {  get; set; }
+
+        public override string ToString()
+        {
+            return Nombre;
+        }
     }
 }

@@ -8,5 +8,6 @@ namespace Aerolínea.Datos
 {
     internal class Filtro
     {
+        public Filtro() { }
     }
 }
