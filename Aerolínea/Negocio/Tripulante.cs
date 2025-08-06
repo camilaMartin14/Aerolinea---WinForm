@@ -24,9 +24,9 @@ namespace Aerolínea.Negocio
 
         public Profesion Profesion { get; set; }
 
-        public int ObraSocial {  get; set; }
+        public ObraSocial ObraSocial {  get; set; }
 
-        public int FranjaHoraria {  get; set; }
+        public FranjaHoraria FranjaHoraria {  get; set; }
 
         public override string ToString()
         {

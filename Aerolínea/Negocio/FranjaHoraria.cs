@@ -8,5 +8,8 @@ namespace Aerolínea.Negocio
 {
     internal class FranjaHoraria
     {
+        public int Id {  get; set; }
+
+        public string Descripcion { get; set; } 
     }
 }
