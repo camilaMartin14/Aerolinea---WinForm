@@ -35,11 +35,27 @@ namespace Aerolínea.Presentacion
 
         private void CargarComboIdiomas()
         {
+            List<Idioma> listaIdiomas = tDao.TraerIdiomas();
+
+            cmbIdioma.DataSource = listaIdiomas;
+
+            cmbIdioma.ValueMember = "id";
+            cmbIdioma.DisplayMember = "descripcion";
+
+            cmbIdioma.SelectedIndex = -1;
 
         }
 
         private void CargarComboProfesiones()
         {
+            List<Profesion> listaProfesiones = tDao.TraerProfesiones();
+
+            cmbProfesion.DataSource = listaProfesiones;
+
+            cmbProfesion.ValueMember = "id";
+            cmbProfesion.DisplayMember = "descripcion";
+
+            cmbProfesion.SelectedIndex = -1;
 
         }
 

@@ -21,10 +21,24 @@ namespace Aerolínea.Datos.DAOs
         {
             List<Tripulante> lista = new List<Tripulante>();
 
-            string consultaSQL = " SELECT t.id_tripulante, t.nombre, t.apellido, t.fecha_nacimiento, t.activo, t.nro_doc,p.id_profesion, p.descripcion, os.descripcion 'descripcion os' , fh.descripcion 'descripcion fh', os.id_obra_social, fh.id_franja_horaria FROM " +
-                                    " tripulantes t, profesiones p, obras_sociales os, franjas_horarias fh WHERE t.id_profesion = p.id_profesion AND t.id_obra_social = os.id_obra_social AND t.id_franja_horaria = fh.id_franja_horaria ";
-
-
+            string consultaSQL =    " SELECT t.id_tripulante," +
+                                    " t.nombre," +
+                                    " t.apellido," +
+                                    " t.fecha_nacimiento," +
+                                    " t.activo, t.nro_doc," +
+                                    "p.id_profesion," +
+                                    " p.descripcion," +
+                                    " os.descripcion 'descripcion os' ," +
+                                    " fh.descripcion 'descripcion fh'," +
+                                    " os.id_obra_social," +
+                                    " fh.id_franja_horaria " +
+                                    " FROM tripulantes t," +
+                                    " profesiones p," +
+                                    " obras_sociales os," +
+                                    " franjas_horarias fh " +
+                                    "WHERE t.id_profesion = p.id_profesion " +
+                                    "AND t.id_obra_social = os.id_obra_social " +
+                                    "AND t.id_franja_horaria = fh.id_franja_horaria ";
 
             if (!string.IsNullOrEmpty(f.Nombre))
             {
@@ -70,8 +84,48 @@ namespace Aerolínea.Datos.DAOs
 
 
         // Cargar Combo Idiomas
+        public List<Idioma> TraerIdiomas()
+        {
+            List<Idioma> lista = new List<Idioma>();
+
+            DataTable dt = oBD.ConsultarTabla("Idiomas");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+
+                Idioma i = new Idioma();
+
+                i.Id = (int)dr["id_idioma"];
+                i.Descripcion = dr["descripcion"].ToString();
+
+                lista.Add(i);
+
+            }
+
+            return lista;
+        }
 
         // Cargar Combo Profesiones
+        public List<Profesion> TraerProfesiones()
+        {
+            List<Profesion> lista = new List<Profesion>();
+
+            DataTable dt = oBD.ConsultarTabla("Profesiones");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+
+                Profesion p = new Profesion();
+
+                p.Id = (int)dr["id_profesion"];
+                p.Descripcion = dr["descripcion"].ToString();
+
+                lista.Add(p);
+
+            }
+
+            return lista;
+        }
 
         // Traer un Tripulante
 
