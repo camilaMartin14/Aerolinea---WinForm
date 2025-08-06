@@ -30,12 +30,12 @@
         {
             menuStrip1 = new MenuStrip();
             archivoToolStripMenuItem = new ToolStripMenuItem();
-            soporteToolStripMenuItem = new ToolStripMenuItem();
-            acercaDeToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
+            soporteToolStripMenuItem = new ToolStripMenuItem();
             avionesToolStripMenuItem = new ToolStripMenuItem();
             tripulantesToolStripMenuItem = new ToolStripMenuItem();
             vuelosToolStripMenuItem = new ToolStripMenuItem();
+            acercaDeToolStripMenuItem = new ToolStripMenuItem();
             objetivoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -57,25 +57,18 @@
             archivoToolStripMenuItem.Size = new Size(73, 24);
             archivoToolStripMenuItem.Text = "Archivo";
             // 
+            // salirToolStripMenuItem
+            // 
+            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            salirToolStripMenuItem.Size = new Size(121, 26);
+            salirToolStripMenuItem.Text = "Salir";
+            // 
             // soporteToolStripMenuItem
             // 
             soporteToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { avionesToolStripMenuItem, tripulantesToolStripMenuItem, vuelosToolStripMenuItem });
             soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
             soporteToolStripMenuItem.Size = new Size(76, 24);
             soporteToolStripMenuItem.Text = "Soporte";
-            // 
-            // acercaDeToolStripMenuItem
-            // 
-            acercaDeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { objetivoToolStripMenuItem });
-            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            acercaDeToolStripMenuItem.Size = new Size(98, 24);
-            acercaDeToolStripMenuItem.Text = "Acerca de...";
-            // 
-            // salirToolStripMenuItem
-            // 
-            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(224, 26);
-            salirToolStripMenuItem.Text = "Salir";
             // 
             // avionesToolStripMenuItem
             // 
@@ -88,12 +81,20 @@
             tripulantesToolStripMenuItem.Name = "tripulantesToolStripMenuItem";
             tripulantesToolStripMenuItem.Size = new Size(224, 26);
             tripulantesToolStripMenuItem.Text = "Tripulantes";
+            tripulantesToolStripMenuItem.Click += tripulantesToolStripMenuItem_Click;
             // 
             // vuelosToolStripMenuItem
             // 
             vuelosToolStripMenuItem.Name = "vuelosToolStripMenuItem";
             vuelosToolStripMenuItem.Size = new Size(224, 26);
             vuelosToolStripMenuItem.Text = "Vuelos";
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            acercaDeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { objetivoToolStripMenuItem });
+            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            acercaDeToolStripMenuItem.Size = new Size(98, 24);
+            acercaDeToolStripMenuItem.Text = "Acerca de...";
             // 
             // objetivoToolStripMenuItem
             // 

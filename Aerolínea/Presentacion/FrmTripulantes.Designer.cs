@@ -83,6 +83,7 @@
             btnConsultar.TabIndex = 4;
             btnConsultar.Text = "Consultar";
             btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += btnConsultar_Click;
             // 
             // btnEliminar
             // 
@@ -136,6 +137,7 @@
             cmbProfesion.Name = "cmbProfesion";
             cmbProfesion.Size = new Size(250, 28);
             cmbProfesion.TabIndex = 9;
+            cmbProfesion.SelectedIndexChanged += cmbProfesion_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -197,7 +199,7 @@
             label5.TabIndex = 16;
             label5.Text = "Vuelo";
             // 
-            // Tripulación
+            // FrmTripulantes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -219,8 +221,9 @@
             Controls.Add(btnModificar);
             Controls.Add(btnAgregar);
             Controls.Add(dgvTripulantes);
-            Name = "Tripulación";
+            Name = "FrmTripulantes";
             Text = "Tripulación";
+            Load += FrmTripulantes_Load;
             ((System.ComponentModel.ISupportInitialize)dgvTripulantes).EndInit();
             ResumeLayout(false);
             PerformLayout();

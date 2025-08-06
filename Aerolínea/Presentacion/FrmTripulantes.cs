@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Aerolínea.Datos;
+using Aerolínea.Datos.DAOs;
+using Aerolínea.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,44 @@ namespace Aerolínea.Presentacion
 {
     public partial class FrmTripulantes : Form
     {
+        TripulanteDao tDao = new TripulanteDao();
         public FrmTripulantes()
         {
             InitializeComponent();
+        }
+
+        private void cmbProfesion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmTripulantes_Load(object sender, EventArgs e)
+        {
+            CargarComboProfesiones();
+            CargarComboIdiomas();
+
+        }
+
+        private void CargarComboIdiomas()
+        {
+
+        }
+
+        private void CargarComboProfesiones()
+        {
+
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            Filtro f = new Filtro();
+            f.Nombre = txtNombre.Text;
+            if (cmbProfesion.SelectedValue != null) f.Profesion = (int)cmbProfesion.SelectedValue;
+
+
+            List<Tripulante> listaTripulantes = tDao.TraerTripulantes(f);
+
+            dgvTripulantes.DataSource = listaTripulantes;
         }
     }
 }

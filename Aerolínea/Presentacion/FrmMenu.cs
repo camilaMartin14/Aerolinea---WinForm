@@ -16,5 +16,11 @@ namespace Aerolínea.Presentacion
         {
             InitializeComponent();
         }
+
+        private void tripulantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTripulantes frmTripulantes = new FrmTripulantes();
+            frmTripulantes.ShowDialog();
+        }
     }
 }

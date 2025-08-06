@@ -8,6 +8,13 @@ namespace Aerolínea.Datos
 {
     internal class Filtro
     {
-        public Filtro() { }
+        public int?  Avion {  get; set; }
+
+        public int? Profesion { get; set; }
+
+        public int? Aeropuerto { get; set; }
+
+        public string? Nombre { get; set; }
+
     }
 }
